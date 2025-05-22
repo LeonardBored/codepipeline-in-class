@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test" : "jest tests",
-    "build": "mkdir -p dist && html-minifier index.html -o dist/index.html --collapse-whitespace --remove-comments && cleancss -o dist/style.css style.css && uglifyjs script.js -o dist/script.js"
+    "build": "mkdir -p dist && html-minifier src/index.html -o dist/index.html --collapse-whitespace --remove-comments && cleancss -o dist/style.css src/style.css && uglifyjs src/script.js -o dist/script.js"
   },
   "devDependencies": {
     "jest": "^29.0.0",
