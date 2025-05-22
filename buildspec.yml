@@ -1,12 +1,16 @@
-{
-  "name": "static-site-build",
-  "version": 1.0.0,
-  "scripts": {
-    "build": "mkdir -p dist && html-minifier index.html -o dist/index.html --collapse-whitespace --remove-comments && cleancss -o dist/style.css style.css && uglifyjs script.js -o dist/script.js"
-  },
-  "devDependencies": {
-    "html-minifier": "^4.0.0",
-    "clean-css-cli": "^5.5.0",
-    "uglify-js": "^3.17.4"
-  }
-}
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist
