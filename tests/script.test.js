@@ -1,4 +1,4 @@
-const { alertMessage } = require('./script');
+const { alertMessage } = require('../src/script');
 
 describe('alertMessage', () => {
     test('should be defined', () => {
