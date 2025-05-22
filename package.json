@@ -1,10 +1,12 @@
 {
-  "name": "static-site-build",
+  "name": "static-site",
   "version": "1.0.0",
   "scripts": {
+    "test" : "jest tests",
     "build": "mkdir -p dist && html-minifier index.html -o dist/index.html --collapse-whitespace --remove-comments && cleancss -o dist/style.css style.css && uglifyjs script.js -o dist/script.js"
   },
   "devDependencies": {
+    "jest": "^29.0.0",
     "html-minifier": "^4.0.0",
     "clean-css-cli": "^5.5.0",
     "uglify-js": "^3.17.4"
