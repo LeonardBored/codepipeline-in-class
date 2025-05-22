@@ -1,6 +1,6 @@
 {
   "name": "static-site-build",
-  "version": "1.0.0",
+  "version": 1.0.0,
   "scripts": {
     "build": "mkdir -p dist && html-minifier index.html -o dist/index.html --collapse-whitespace --remove-comments && cleancss -o dist/style.css style.css && uglifyjs script.js -o dist/script.js"
   },
